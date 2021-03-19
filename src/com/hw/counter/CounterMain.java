@@ -8,12 +8,12 @@ import java.util.Collection;
 public class CounterMain extends Counter {
     public static void main(String[] args) throws InterruptedException {
 
-        Counter multiThreadCounter = new Counter();
+        Counter counter = new Counter();
         Collection<Thread> threadCollection = new ArrayList<Thread>();
 
 
         for (int i = 0; i < 10; i++) {
-            Thread thread = new Thread(multiThreadCounter);
+            Thread thread = new Thread(counter);
             thread.start();
             threadCollection.add(thread);
         }
